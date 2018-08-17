@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
 import Header from './common.components/Header'
+import Containner from './common.components/PageWrapper'
+import Home from './pages/Home'
 
 class App extends Component {
   render() {
@@ -11,8 +13,10 @@ class App extends Component {
         <BrowserRouter>
           <Fragment>
             <Header />
-            <Route path="/" exect />
-            <Route path="/detail" />
+            <Containner>
+              <Route path="/" exect component={Home} />
+              <Route path="/detail" exect />
+            </Containner>
           </Fragment>
         </BrowserRouter>
       </Provider>
