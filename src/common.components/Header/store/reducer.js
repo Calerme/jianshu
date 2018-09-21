@@ -5,7 +5,8 @@ import {
 } from './actionTypes'
 
 const defaultState = fromJS({
-    focused: false
+    focused: false,
+    hotkeyList: []
 })
 
 export default (state = defaultState, action) => {

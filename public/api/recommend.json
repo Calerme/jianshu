@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "data": [
+    { "title": "7日热门", "imgUrl": "/mock_data/recommend/1.png" },
+    { "title": "30日热门", "imgUrl": "/mock_data/recommend/2.png" },
+    { "title": "优先连载", "imgUrl": "/mock_data/recommend/3.png" },
+    { "title": "简书版权", "imgUrl": "/mock_data/recommend/4.png" },
+    { "title": "简书大学堂", "imgUrl": "/mock_data/recommend/5.png" }
+  ]
+}

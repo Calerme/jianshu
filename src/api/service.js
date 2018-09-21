@@ -1,7 +1,9 @@
 import axios from 'axios'
 import {
   subjectPath,
-  articlePath
+  articlePath,
+  recommendPath,
+  hotkeyPath
 } from './api.conf'
 
 const env = process.env.NODE_ENV === 'development' ? 'dev' : 'product';
@@ -12,4 +14,12 @@ export const getSubjectList = () => {
 
 export const getArticleList = () => {
   return axios.get(articlePath[env])
+}
+
+export const getRecommendList = () => {
+  return axios.get(recommendPath[env])
+}
+
+export const getHotkeyList = () => {
+  return axios.get(hotkeyPath[env])
 }

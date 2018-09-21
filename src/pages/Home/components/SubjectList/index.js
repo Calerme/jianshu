@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import {
   SubjectWrapper,
@@ -8,7 +8,7 @@ import {
   actionCreators
 } from '../../store'
 
-class SubjectList extends Component {
+class SubjectList extends PureComponent {
   componentDidMount() {
     this.init()
   }
@@ -16,7 +16,7 @@ class SubjectList extends Component {
     return (
       <SubjectWrapper>
         { this.getSubjectList() }
-        <span className="more">更多热门专题</span>
+        <span className="more">更多热门专题<i className="iconfont">&#xe75c;</i></span>
       </SubjectWrapper>
     )
   }

@@ -17,6 +17,7 @@ export const Logo = styled.div`
     width: 100px;
     height: 56px;
   }
+  cursor: pointer;
 `
 /** Middle Area */
 export const MiddleArea = styled.div`
@@ -24,7 +25,6 @@ export const MiddleArea = styled.div`
   height: 56px;
   margin: 0 auto;
   .iconfont {
-    display: inline-block;
     margin-right: 2px;
     font-size: 20px;
     transform: translate3d(0, -1px, 0);
@@ -48,6 +48,7 @@ export const DownloadButton = styled.a`
   line-height: 56px;
   font-size: 17px;
   padding: 0 15px;
+  color: #333;
   cursor: pointer;
   &:hover {
     background: #f5f5f5;
@@ -100,6 +101,48 @@ export const SearchWrapper = styled.div`
   }
 `
 
+export const HotSearchPanel = styled.div`
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 100%;
+  width: 250px;
+  padding: 20px 20px 10px;
+  margin-top: 9px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  background: #fff;
+  .title {
+    height: 20px;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+    color: #969696;
+    font-size: 14px;
+    .right {
+      float: right;
+      .iconfont {
+        font-size: inherit;
+      }
+    }
+  }
+  .hotkey-wrapper {
+    overflow: hidden;
+    .hotkey {
+      float: left;
+      line-height: 20px;
+      padding: 2px 6px;
+      font-size: 12px;
+      font-style: normal;
+      color: #787878;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-right: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+  }
+`
+
 export const ModeButton = styled.a`
   float: right;
   height: 56px;
@@ -142,7 +185,6 @@ export const WriteAriticle = styled.a`
   color: #fff;
   cursor: pointer;
   .iconfont {
-    display: inline-block;
     margin-right: 5px;
     font-size: 14px;
     transform: translate3d(0, -1px, 0);

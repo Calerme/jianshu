@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import {
   Article
@@ -7,7 +7,7 @@ import {
   actionCreators
 } from '../../store'
 
-class ArticleCom extends Component {
+class ArticleCom extends PureComponent {
   componentDidMount() {
     this.init()
   }
@@ -20,8 +20,14 @@ class ArticleCom extends Component {
             <p className="desc">{item.get('desc')}</p>
             <p className="meta">
               <span className="author">{item.get('author')}</span>
-              <span className="comments">{item.get('comments')}</span>
-              <span className="starts">{item.get('starts')}</span>
+              <span className="comments">
+                <i className="iconfont">&#xe6c7;</i>
+                {item.get('comments')}
+              </span>
+              <span className="starts">
+                <i className="iconfont">&#xe621;</i>
+                {item.get('starts')}
+              </span>
             </p>
           </div>
           <div className="img">

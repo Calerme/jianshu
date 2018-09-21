@@ -1,20 +1,26 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import { actionCreators } from '../../store'
 import {
   Recommend
 } from '../../style'
 
-class RecommendCom extends Component {
+class RecommendCom extends PureComponent {
+  componentDidMount() {
+    this.props.getList()
+  }
   render() {
     return (
-      this.props.list.map(item => {
-        return (
-          <Recommend>
-            <li>1</li>
-            <li>2</li>
-          </Recommend>
-        )
-      })
+      <Recommend>
+        {
+          this.props.list.map((item) => (
+            <li
+              key={item.get('title')}
+              style={{backgroundImage: `url(${item.get('imgUrl')})`}}
+            >{item.get('title')}</li>
+          ))
+        }
+      </Recommend>
     )
   }
 }
@@ -24,7 +30,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-
+  getList () {
+    dispatch(actionCreators.getRecommend())
+  }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecommendCom)

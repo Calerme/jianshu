@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
@@ -6,7 +6,7 @@ import Header from './common.components/Header'
 import Containner from './common.components/PageWrapper'
 import Home from './pages/Home'
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <Provider store={store}>
